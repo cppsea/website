@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./scripts/navbar.js"></script>
+    <script defer src="./scripts/footer.js"></script>
     <link rel="icon" type="image/png" href="/assets/images/triangle.png">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/home.css">
@@ -34,16 +35,44 @@
           <img draggable="false" src="./assets/images/seal-in-triangle.png" alt="delta inside of a triangle">
         </div>
       </section>
-      <section class="about">
-        <div>
-          <h1 class="title">Delta the Seal can't wait for you to join us!</h1>
+      <section class="about block">
+        <div class="left">
+          <h1 class="title">Let's build amazing together!</h1>
           <p>
             We're a community open to people of all backgrounds and skill levels. There is absolutely <b>no</b> membership fees.
             The only requirement is your interest in software engineering.
           </p>
+          <div class="anchors">
+            <a class="btn-arrow" href="join/">
+              <span>join us</span>
+              <svg width="10" height="16" viewBox="0 0 10 16">
+                <path d="M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z"/>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div>
-
+        <div class="right">
+          <div class="benefit">
+            <img draggable="false" alt="community" src="./assets/tokens/connection.svg">
+            <div class="content">
+              <h3>Community</h3>
+              <p>With over 200+ members, with the interest of software engineering at Cal Poly Pomona.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <img draggable="false" alt="projects" src="./assets/tokens/rocket.svg">
+            <div class="content">
+              <h3>Projects</h3>
+              <p>Collaborate with collegeues by putting your skills into use.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <img draggable="false" alt="workshops" src="./assets/tokens/compass.svg">
+            <div class="content">
+              <h3>Workshops</h3>
+              <p>Guest speakers, version control, trending technologies, resume tips, data structure & algorithms</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="events">
