@@ -1,0 +1,48 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero .content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero .title {
+  line-height: 1;
+  margin-block: 0;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.hero .pre-title {
+  line-height: 1;
+  margin-block: 0;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.hero .delta-in-triangle img {
+  width: min(80vw,400px);
+}
+
+@media (max-width: 1060px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  
+  .hero .content {
+    width: 100%;
+  }
+
+  .hero .delta-in-triangle {
+    position: relative;
+  }
+
+  .hero .delta-in-triangle {
+    margin: auto;
+  }
+}

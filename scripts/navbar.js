@@ -2,12 +2,12 @@ const navbar = document.querySelector("nav");
 
 const listings = [
   {
-    name: "home",
-    src: "/"
-  },
-  {
     name: "events",
     src: "../events"
+  },
+  {
+    name: "projects",
+    src: "../projects"
   },
   {
     name: "about",
@@ -29,13 +29,20 @@ logo.id = "sea-logo";
 logo.src = "../../assets/images/sealogo.png";
 
 const rightNav = document.createElement("ul");
-rightNav.className = "right";
+rightNav.classList.add("right");
+
 listings.forEach((list) => {
   const { name, src } = list;
+  const pathname = window.location.pathname.slice(1, -1);
   const element = document.createElement("li");
-  const anchor = document.createElement("a");
   const text = document.createTextNode(name);
+  const anchor = document.createElement("a");
   anchor.href = src;
+
+  if (src.slice(3) === pathname) {
+    element.setAttribute("id", "active");
+  }
+
   anchor.appendChild(text);
   element.appendChild(anchor);
   rightNav.appendChild(element);
