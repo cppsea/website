@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  --primary-color: #27c2fc;
+  --text-color: #1d1d1f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#sea-logo {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+nav .right {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+nav .right a {
+  text-decoration: none;
+}
+
+nav .right a:visited {
+  color: var(--text-color)
+}
+
+nav .right li {
+  border-bottom: 3px solid transparent;
+}
+
+nav .right li:hover {
+  border-bottom: 3px solid var(--primary-color);
+}
