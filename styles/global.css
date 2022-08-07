@@ -3,7 +3,12 @@
 * {
   --primary-color: #27c2fc;
   --text-color: #1d1d1f;
+  --primary-gradient: linear-gradient(157deg, rgba(39,194,252,1) 0%, rgba(32,224,190,1) 100%);
   box-sizing: border-box;
+}
+
+a {
+  color: var(--text-color);
 }
 
 body {
@@ -20,6 +25,36 @@ body {
 
 #active {
   border-bottom: 3px solid var(--primary-color);
+}
+
+#blue {
+  color: var(--primary-color);
+}
+
+.button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid var(--text-color);
+  transition: all 500ms;
+}
+
+.button:hover {
+  color: white;
+  background: black;
+  outline: 2px solid black;
+}
+
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-arrow:hover * {
+  color: var(--primary-color);
+  fill: var(--primary-color);
 }
 
 nav {
