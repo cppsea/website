@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+.light {
+  --text-color: #1d1d1f;
+  --bg-color: white;
+}
+
+.dark {
+  --text-color: #ffffff;
+  --bg-color: #0E131F;
+}
+
 * {
   --primary-color: #27c2fc;
-  --text-color: #1d1d1f;
   --primary-gradient: linear-gradient(157deg, rgba(39,194,252,1) 0%, rgba(32,224,190,1) 100%);
   box-sizing: border-box;
+  background-color: var(--bg-color);
 }
 
 a {
@@ -47,9 +57,10 @@ body {
 }
 
 .btn-arrow {
-  display: flex;
-  align-items: center;
   gap: 10px;
+  display: flex;
+  fill: var(--text-color);
+  align-items: center;
 }
 
 .btn-arrow:hover * {
