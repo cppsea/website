@@ -20,6 +20,9 @@ const SOCIALS = [
   }
 ];
 
+const footerContainer = document.createElement("div");
+footerContainer.id = "footer-container"
+
 const branding = document.createElement("div");
 branding.id = "branding";
 
@@ -75,9 +78,15 @@ listings.forEach((list) => {
   links.append(element);
 });
 
-
 routes.appendChild(links);
 
-footer.appendChild(branding);
-footer.appendChild(social);
-footer.appendChild(routes);
+footerContainer.appendChild(branding);
+footerContainer.appendChild(social);
+footerContainer.appendChild(routes);
+
+const copyright = document.createElement("div");
+copyright.id = "copyright"
+copyright.innerText = "© 2022 SOFTWARE ENGINEERING ASSOCIATION AT CAL POLY POMONA · ALL RIGHTS RESERVED"
+
+footer.appendChild(footerContainer);
+footer.appendChild(copyright);

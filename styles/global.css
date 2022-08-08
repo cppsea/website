@@ -4,12 +4,14 @@
   --text-color: #1d1d1f;
   --bg-primary-color: white;
   --bg-secondary-color: #fbfbfb;
+  --secondary-text-color: #4e4e4e;
 }
 
 .dark {
   --text-color: #ffffff;
   --bg-primary-color: #0E131F;
   --bg-secondary-color: #151b28;
+  --secondary-text-color: #b9b9b9;
 }
 
 * {
@@ -46,6 +48,14 @@ body {
 
 #blue {
   color: var(--primary-color);
+}
+
+.darken-text {
+  color: var(--secondary-text-color);
+}
+
+.gradient {
+  background: var(--primary-gradient);
 }
 
 .button {
@@ -126,7 +136,7 @@ nav .right li:hover {
   border-bottom: 3px solid var(--primary-color);
 }
 
-footer {
+#footer-container {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -135,38 +145,47 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-footer li {
+#footer-container li {
   text-transform: capitalize;
 }
 
-footer li:hover a {
+#footer-container li:hover a {
   color: var(--primary-color);
 }
 
-footer ul {
+#footer-container ul {
   padding-inline-start: 0;
   display: flex;
   flex-direction: column;
   gap: 10px
 }
 
-footer #branding img {
+#footer-container #branding img {
   width: 250px;
 }
 
-footer h3 {
+#footer-container h3 {
   margin-block-start: 0;
 }
 
+#copyright {
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--secondary-text-color);
+}
+
 @media (max-width: 400px) {
-  footer #branding {
+  #footer-container #branding {
     width: 100%;
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
   nav .left {
     width: 100%;
     display: flex;
@@ -178,4 +197,9 @@ footer h3 {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  #footer-container #routes, #social {
+    width: 40%;
+  }
+
 }
