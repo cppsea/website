@@ -20,6 +20,7 @@ const listings = [
 ];
 
 const leftNav = document.createElement("div");
+leftNav.classList.add("left");
 
 const logoAnchor = document.createElement("a");
 logoAnchor.href = "/";
