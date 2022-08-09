@@ -60,12 +60,13 @@ section {
 }
 
 .about .right {
+  gap: 15px;
+  width: 40%;
+  padding: 0 20px 20px 20px;
+  display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 40%;
-  display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .about .right > h3 {
@@ -98,6 +99,7 @@ section {
 
 .events {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 10px;
 }
@@ -157,6 +159,10 @@ section {
   flex: content;
 }
 
+.events .card .content > span {
+  font-size: 13px;
+}
+
 @media (max-width: 400px) {
   .hero {
     margin-top: 0;
@@ -189,11 +195,23 @@ section {
   .about .right {
     width: 100%;
   }
-  
+
+  .event-container .right {
+    width: 100%;
+  }
+
+  .event-container .lefts {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1100px) {
   section {
     margin: 20px;
+  }
+
+  .about .right {
+    width: 100%;
+    gap: 20px;
   }
 }
