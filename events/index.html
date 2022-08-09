@@ -9,26 +9,35 @@
   <link rel="stylesheet" href="./styles.css">
   <script defer src="../../scripts/navbar.js"></script>
   <script defer src="../../scripts/footer.js"></script>
+  <script defer src="../../scripts/events.js"></script>
   <title>Events - SEA</title>
 </head>
 <body>
   <nav></nav>
   <main>
     <section class="upcoming-events">
-      <h1>Upcoming Events</h1>
-      <div class="card block">
-        <h1>First Major Group Project Meeting</h1>
-        <span>12 - 1 PM | Tuesday, March 1, 2021</span>
-        <p>
-          The project idea that most people voted for and that we'll be working on is the Schedule Planner!- 
-          A more intuitive schedule planning application that can suggest the most optimal way to fulfill all
-          your major requirements and GEs, keeping prerequisites in mind, and without asking the user to enter
-          as much information as Cal Poly's current tools. We'll be going over what to do from here.
-        </p>
+      <h1>Events</h1>
+      <div class="events">
+        <center>
+          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="100px" height="100px" viewBox="0 0 50 50" xml:space="preserve">
+            <path fill="#27c2fc" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+              <animateTransform attributeType="xml"
+                attributeName="transform"
+                type="rotate"
+                from="0 25 25"
+                to="360 25 25"
+                dur="0.6s"
+                repeatCount="indefinite"/>
+            </path>
+          </svg>
+          <h2>Fetching Events</h2>
+        </center>
       </div>
     </section>
     <section class="past-events">
       <h1>Past Events</h1>
+      <div class="events"></div>
     </section>
   </main>
   <footer></footer>
