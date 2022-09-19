@@ -10,15 +10,16 @@ section {
   padding: 2px;
 }
 
+.board-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 board {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
-  gap: 20px;
-}
-
-board .container {
-  display: flex;
   min-width: 300px;
   gap: 20px;
 }
@@ -63,7 +64,7 @@ section h1 {
 }
 
 @media (max-width: 930px) {
-  board {
+  .board-container {
     justify-content: center;
   }
 }
