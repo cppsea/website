@@ -1,4 +1,4 @@
-const board = document.querySelector("board-members");
+const boards = document.querySelectorAll("board");
 
 const BOARD_MEMBERS = [
   {
@@ -86,8 +86,13 @@ function createBoardMemberElement(name, position, photo, media) {
   return container;
 }
 
-BOARD_MEMBERS.forEach((info) => {
-  const { name, photo, position, media } = info;
-  const newMember = createBoardMemberElement(name, position, photo, media);
-  board.appendChild(newMember);
+boards.forEach((board) => {
+  const name = board.getAttribute("name");
+  const position = board.getAttribute("position");
+  const photo = board.getAttribute("avatar");
+  const linkedin = board.getAttribute("linkedin");
+  const website = board.getAttribute("website");
+
+  const member = createBoardMemberElement(name, position, photo, [linkedin, website])
+  board.appendChild(member);
 });
