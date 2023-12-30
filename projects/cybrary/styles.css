@@ -64,3 +64,12 @@
     background-color: #27c4f8; /* Adjust as needed */
   }
 }
+
+@media (max-width: 600px) {
+  #img1 {
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 0;
+  }
+}

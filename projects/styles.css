@@ -74,7 +74,7 @@ project #cybrary-img1 {
 
 project #htgr-img1 {
   object-fit: contain;
-  transform: translate(-20px,20px);
+  transform: translate(-20px, 20px);
 }
 project #htgr-img2 {
   object-fit: contain;
@@ -89,7 +89,6 @@ project #htgr-img2 {
 }
 
 @media (max-width: 865px) {
-
   project {
     flex-direction: column-reverse;
   }
@@ -115,11 +114,11 @@ project #htgr-img2 {
     display: none;
   }
 
-  project #htgr-img1{
+  project #htgr-img1 {
     aspect-ratio: 1/1;
     width: 325px;
   }
-  project #htgr-img2{
+  project #htgr-img2 {
     aspect-ratio: 1/1;
     width: 325px;
   }
@@ -166,11 +165,43 @@ project #htgr-img2 {
   text-transform: uppercase;
 }
 
-
 .hero .delta-in-triangle img {
-  width: min(100vw,450px);
+  width: min(80vw, 400px);
 }
 
 html {
   scroll-behavior: smooth;
- }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .hero .content {
+    width: 100%;
+  }
+
+  .hero .delta-in-triangle {
+    position: relative;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  section {
+    margin: 20px;
+  }
+
+  .about .right {
+    width: 100%;
+    gap: 20px;
+  }
+}
