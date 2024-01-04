@@ -10,13 +10,14 @@
 .team-members .title {
   font-size: 40px;
   text-align: center;
+  line-height: 3;
 }
 
 .members {
   display: flex;
-  flex-direction: row; /* This will arrange the children horizontally */
-  flex-wrap: wrap; /* This will wrap the children to the next line if there's not enough space */
-  justify-content: center; /* This will center the children horizontally */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
 }
 
@@ -42,5 +43,14 @@ member {
     height: auto;
     margin: 10px auto;
     border-radius: 0;
+  }
+  .members {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .members member {
+    flex: 0 0 48%; /* This will create two columns. Adjust as needed. */
+    margin-bottom: 4%; /* This will create space between rows. Adjust as needed. */
   }
 }

@@ -3,7 +3,8 @@ const members = document.querySelectorAll("member");
 const MEDIA_ICONS = {
   "linkedin": "../../assets/tokens/linkedin.svg",
   "website": "../../assets/tokens/website.svg",
-  "github": "../../assets/tokens/github.svg"
+  "github": "../../assets/tokens/github.svg",
+  "default": "../../assets/tokens/transparent.svg"
 };
 
 function createMember(member, props) {
@@ -21,7 +22,7 @@ function createMember(member, props) {
   const mediaFrame = document.createElement("div");
   mediaFrame.classList.add("media-frame")
   media?.forEach((link) => {
-    if (!link) return;
+    // if (!link) return;
 
     const icon = document.createElement("a");
     icon.href = link;
@@ -30,7 +31,9 @@ function createMember(member, props) {
 
     const social = document.createElement("img");
     social.classList.add("social");
-    if (link.includes("linkedin")) {
+    if (!link){
+      social.src = MEDIA_ICONS["default"];
+    } else if (link.includes("linkedin")) {
       social.src = MEDIA_ICONS["linkedin"];
     } else if (link.includes("github")) {
       social.src = MEDIA_ICONS["github"];
