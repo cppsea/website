@@ -21,6 +21,14 @@
   width: 100%;
 }
 
+member h3, p {
+  margin-block: 0;
+}
+
+member a{
+  margin-top: 5px;
+}
+
 member img {
   filter: invert(1);
   margin: 5px;

@@ -22,7 +22,7 @@ function createMember(member, props) {
   const mediaFrame = document.createElement("div");
   mediaFrame.classList.add("media-frame")
   media?.forEach((link) => {
-    // if (!link) return;
+    if (!link) return;
 
     const icon = document.createElement("a");
     icon.href = link;
@@ -56,11 +56,12 @@ members.forEach((member) => {
   const name = member.getAttribute("name");
   const position = member.getAttribute("position");
   const linkedin = member.getAttribute("linkedin");
+  const github = member.getAttribute("github");
   const website = member.getAttribute("website");
 
   createMember(member, {
     name,
     position,
-    media: [linkedin, website]
+    media: [linkedin, github, website]
   })
 });
