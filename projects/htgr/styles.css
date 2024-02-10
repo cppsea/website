@@ -68,6 +68,11 @@ member img {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .members member {
+    flex: 0 0 48%; /* This will create two columns. Adjust as needed. */
+    margin-bottom: 4%; /* This will create space between rows. Adjust as needed. */
+  }
   
 
 }
