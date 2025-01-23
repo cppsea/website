@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/assets/images/triangle.png">
-  <link rel="stylesheet" href="../../styles/global.css">
-  <link rel="stylesheet" href="./styles.css">
-  <script defer src="../../scripts/navbar.js"></script>
-  <script defer src="../../scripts/footer.js"></script>
-  <script defer src="../../scripts/events.js"></script>
-  <title>Events - SEA</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HCHCC9XSL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/images/triangle.png" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="../../scripts/navbar.js"></script>
+    <script defer src="../../scripts/footer.js"></script>
+    <script defer src="../../scripts/events.js"></script>
+    <title>Events - SEA</title>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0HCHCC9XSL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-0HCHCC9XSL');
-  </script>
-</head>
-<body>
-  <nav></nav>
-  <main>
-    <section class="upcoming-events">
-      <h1>Events</h1>
-      <div class="events">
-        <center>
-          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="100px" height="100px" viewBox="0 0 50 50" xml:space="preserve">
-            <path fill="#27c2fc" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
-              <animateTransform attributeType="xml"
-                attributeName="transform"
-                type="rotate"
-                from="0 25 25"
-                to="360 25 25"
-                dur="0.6s"
-                repeatCount="indefinite"/>
-            </path>
-          </svg>
-          <h2>Fetching Events</h2>
-        </center>
-      </div>
-    </section>
-    <section class="past-events">
-      <h1>Past Events</h1>
-      <div class="events"></div>
-    </section>
-  </main>
-  <footer></footer>
-</body>
+      gtag("config", "G-0HCHCC9XSL");
+    </script>
+  </head>
+  <body>
+    <nav></nav>
+    <main>
+      <section class="calendar-section">
+        <h1>Calendar</h1>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showPrint=0&src=Y3Bwc2VhMjAyMUBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043"
+          style="border: solid 1px #777"
+          class="calendar"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </section>
+      <section class="upcoming-events">
+        <h1>Events</h1>
+        <div class="events">
+          <center>
+            <svg
+              version="1.1"
+              id="loader-1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="100px"
+              height="100px"
+              viewBox="0 0 50 50"
+              xml:space="preserve"
+            >
+              <path
+                fill="#27c2fc"
+                d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+              >
+                <animateTransform
+                  attributeType="xml"
+                  attributeName="transform"
+                  type="rotate"
+                  from="0 25 25"
+                  to="360 25 25"
+                  dur="0.6s"
+                  repeatCount="indefinite"
+                />
+              </path>
+            </svg>
+            <h2>Fetching Events</h2>
+          </center>
+        </div>
+      </section>
+      <section class="past-events">
+        <h1>Past Events</h1>
+        <div class="events"></div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
