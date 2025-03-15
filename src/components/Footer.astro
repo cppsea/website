@@ -1,0 +1,46 @@
+---
+const SOCIALS = [
+  {
+    name: "instagram",
+    url: "https://www.instagram.com/cpp.sea/",
+  },
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/company/cpp-sea",
+  },
+  {
+    name: "github",
+    url: "https://github.com/cppsea",
+  },
+  {
+    name: "discord",
+    url: "https://discord.gg/3FJNHyJ6P6",
+  },
+];
+---
+
+<footer>
+  <div id="footer-container">
+    <div id="branding">
+      <a href="/"><img src="/assets/images/full-logo.png" /></a>
+    </div><div id="social">
+      <h3>Social</h3>
+      <ul>
+      {SOCIALS.map((social) => (
+        <li><a href={social.url}>{social.name}</a></li>
+      ))}
+      </ul>
+    </div><div id="routes">
+      <h3>More</h3><ul>
+        <li><a href="../../events">events</a></li>
+        <li><a href="../../projects">projects</a></li>
+        <li><a href="../../about">about</a></li><li>
+          <a href="https://forms.gle/4HRGjgPjaLXfdzDK7">join</a>
+        </li>
+      </ul>
+    </div>
+  </div><div id="copyright">
+    &copy; {(new Date()).getFullYear()} SOFTWARE ENGINEERING ASSOCIATION AT CAL POLY POMONA · ALL RIGHTS
+    RESERVED
+  </div>
+</footer>

@@ -1,25 +1,6 @@
 
 const footer = document.querySelector("footer");
 
-const SOCIALS = [
-  {
-    name: "instagram",
-    url: "https://www.instagram.com/cpp.sea/"
-  },
-  {
-    name: "linkedin",
-    url: "https://www.linkedin.com/company/cpp-sea"
-  },
-  {
-    name: "github",
-    url: "https://github.com/cppsea",
-  },
-  {
-    name: "discord",
-    url: "https://discord.gg/3FJNHyJ6P6"
-  }
-];
-
 const footerContainer = document.createElement("div");
 footerContainer.id = "footer-container"
 
