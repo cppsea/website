@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/about.css';
+
+const board = [
+  {
+    name: 'Giovanni Zamora',
+    position: 'President',
+    avatar: '../assets/images/giovanni_zamora.jpg',
+    linkedin: 'https://linkedin.com/in/giovanni-zamora',
+  },
+  {
+    name: 'Gloriele Mendoza',
+    position: 'Project Manager',
+    avatar: '../assets/images/gloriele_mendoza.jpg',
+    linkedin: 'https://linkedin.com/in/gloriele-mendoza',
+  },
+  {
+    name: 'Aashish Awadhani',
+    position: 'Treasurer',
+    avatar: '../assets/images/aashish_awadhani.jpg',
+    linkedin: 'https://linkedin.com/in/aashish-awadhani',
+  },
+  {
+    name: 'Darren Banhthai',
+    position: 'Website Maintainer',
+    avatar: '../assets/images/darren_banhthai.png',
+    linkedin: 'https://linkedin.com/in/darren-banhthai',
+  },
+  {
+    name: 'Yu Sun',
+    position: 'Advisor',
+    avatar: '../assets/images/yu_sun.jpg',
+    linkedin: 'https://linkedin.com/in/yu-sun',
+    website: 'https://yusun.io/',
+  },
+];
+
+const founders = [
+  {
+    name: 'Hanaa Zerroug',
+    position: 'Co-President',
+    avatar: '../assets/images/seal.jpeg',
+    linkedin: 'https://linkedin.com/in/hanaa-zerroug',
+  },
+  {
+    name: 'Samuel Foster',
+    position: 'Co-President',
+    avatar: '../assets/images/samuel_foster.jpeg',
+    linkedin: 'https://linkedin.com/in/samuel-foster',
+    website: 'https://fostersamuel.com/',
+  },
+  {
+    name: 'Justin Tok',
+    position: 'Treasurer',
+    avatar: '../assets/images/justin_tok.jpeg',
+    linkedin: 'https://linkedin.com/in/justin-tok',
+    website: 'https://www.justintok.com/',
+  },
+  {
+    name: 'Anirban Manna',
+    position: 'Scheduler',
+    avatar: '../assets/images/anirban_manna.jpeg',
+    linkedin: 'https://linkedin.com/in/anirban-manna',
+  },
+];
+---
+
+<Layout title='About - SEA'>
+  <main>
+    <section>
+      <h1>Our Mission</h1>
+      <p>
+        The Software Engineering Association (SEA) teaches and encourages the
+        professional skills needed to be a Software Engineer, including code
+        review, unit testing, communication, and software design. Our online and
+        in-meeting exercises allow anyone, novice or professional, to sharpen
+        and practice these skills.
+      </p>
+      <h1>Our Board</h1>
+      <div class='board-container'>
+        {
+          board.map((member) => (
+            <board>
+              <div class='photo-wrapper gradient'>
+                <img id='board-photo' src={member.avatar} />
+              </div>
+              <div class='content'>
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
+                <div class='media-frame'>
+                  <a href={member.linkedin} target='_blank' rel='noopener'>
+                    <img class='social' src='../assets/tokens/linkedin.svg' />
+                  </a>
+                  {member.website && (
+                    <a href={member.website} target='_blank' rel='noopener'>
+                      <img class='social' src='../assets/tokens/website.svg' />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </board>
+          ))
+        }
+      </div>
+      <h1>Our Founders</h1>
+      <div class='board-container'>
+        {
+          founders.map((member) => (
+            <board>
+              <div class='photo-wrapper gradient'>
+                <img id='board-photo' src={member.avatar} />
+              </div>
+              <div class='content'>
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
+                <div class='media-frame'>
+                  <a href={member.linkedin} target='_blank' rel='noopener'>
+                    <img class='social' src='../assets/tokens/linkedin.svg' />
+                  </a>
+                  {member.website && (
+                    <a href={member.website} target='_blank' rel='noopener'>
+                      <img class='social' src='../assets/tokens/website.svg' />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </board>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>

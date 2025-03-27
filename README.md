@@ -22,17 +22,18 @@ Any changes you make to files will automatically update on the server and refres
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── assets/
+│   └── images/
 ├── src/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
-└── package.json
+├── package.json
+└── README.md (you are here!)
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+To learn more about the folder structure of an Astro project, refer to [Astro's guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
 ## 🧞 Commands
 
