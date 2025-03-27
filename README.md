@@ -1,15 +1,24 @@
-# SEA - Website
-Our static landing page features information for prospective members to learn about our organaization and enables members to see what events are currently happening. The website is purposely written in vanilla HTML/CSS and JavaScript without any libraries or frameworks to allow anyone to quickly contribute to our codebase without any prerequisite knowledge of a particular technology.
+# 🌊 SEA - Website
 
-## Getting Started
-Download [Visual Studio Code](https://code.visualstudio.com/download) or any code editor of choice. It's recommended to use VS code because of easy of use and [Astro language support](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode).
+Our static landing page features information for prospective members to learn about our organaization and enables members to see what events are currently happening. The website is written in [Astro](https://astro.build/), a lightweight static site generator to allow anyone to quickly contribute to our codebase with little prerequisite knowledge of a particular technology.
 
-Download Node & NPM are installed.
+## ⭐ Getting Started
 
+Download [Visual Studio Code](https://code.visualstudio.com/download) or any code editor of choice. It's recommended to use VS code for ease of use and [Astro language support](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode).
+
+Download [Node & NPM](https://nodejs.org/en/download), NPM comes bundled with Node.
+
+### Local Development
+
+To start the local development server, run:
+
+```
+npm run dev
+```
+
+Any changes you make to files will automatically update on the server and refresh the page.
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
@@ -38,6 +47,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Made with ❤️ by SEA
