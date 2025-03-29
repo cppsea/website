@@ -5,7 +5,6 @@ import '../../styles/project.css';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
-  console.log(projects);
   return projects.map((project: any) => ({
     params: { id: project.data.slug },
     props: { project },
