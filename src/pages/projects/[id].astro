@@ -1,0 +1,104 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/home.css';
+import '../../styles/project.css';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  console.log(projects);
+  return projects.map((project: any) => ({
+    params: { id: project.data.slug },
+    props: { project },
+  }));
+}
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<Layout
+  title={`${project.data.name} - SEA`}
+  description={project.data.description}
+  image={project.data.image}
+>
+  <main>
+    <section class='hero'>
+      <div class='content'>
+        <h1 class='title'>{project.data.name}</h1>
+
+        <h2 class='date'>{project.data.date}</h2>
+        <p>
+          {project.data.description}
+        </p>
+        <div class='anchors'>
+          <a class='btn-arrow' target='_blank' href={project.data.link}>
+            <span>Learn More</span>
+            <svg width='10' height='16' viewBox='0 0 10 16'>
+              <path
+                d='M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z'
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class='anchors'>
+          <a class='btn-arrow' target='_blank' href={project.data.github}>
+            <span>GitHub</span>
+            <svg width='10' height='16' viewBox='0 0 10 16'>
+              <path
+                d='M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z'
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class='delta-in-triangle'>
+        <img
+          draggable='false'
+          src={project.data.image}
+          alt='test icebreak logo'
+        />
+      </div>
+    </section>
+    <Content />
+    <section class='team-members block'>
+      <h1 class='title'>The Team</h1>
+      <div class='members'>
+        {
+          project.data.members.map((member: any) => (
+            <member>
+              <div class='content'>
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
+                <div class='media-frame'>
+                  {member.linkedin && (
+                    <a href={member.linkedin} target='_blank' rel='noopener'>
+                      <img
+                        class='social'
+                        src='../../assets/tokens/linkedin.svg'
+                      />
+                    </a>
+                  )}
+                  {member.github && (
+                    <a href={member.github} target='_blank' rel='noopener'>
+                      <img
+                        class='social'
+                        src='../../assets/tokens/github.svg'
+                      />
+                    </a>
+                  )}
+                  {member.website && (
+                    <a href={member.website} target='_blank' rel='noopener'>
+                      <img
+                        class='social'
+                        src='../../assets/tokens/website.svg'
+                      />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </member>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>

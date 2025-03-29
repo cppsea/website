@@ -24,6 +24,8 @@ Any changes you make to files will automatically update on the server and refres
 /
 ├── assets/
 │   └── images/
+├── projects/
+│   └── icebreak.md
 ├── src/
 │   ├── layouts/
 │   │   └── Layout.astro
@@ -32,6 +34,10 @@ Any changes you make to files will automatically update on the server and refres
 ├── package.json
 └── README.md (you are here!)
 ```
+
+### 💼 Projects
+
+Our projects are stored in the `projects/` directory as Markdown (`.md`) files to easily edit any text, images, or content.
 
 To learn more about the folder structure of an Astro project, refer to [Astro's guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
