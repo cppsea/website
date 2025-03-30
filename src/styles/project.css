@@ -51,9 +51,12 @@ member .media-frame {
 }
 
 member img {
-  filter: invert(1);
   margin: 5px;
   width: 20px;
+}
+
+.dark member img {
+  filter: invert(1);
 }
 
 @media (max-width: 600px) {
