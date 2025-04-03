@@ -6,7 +6,7 @@ description: 'A project to allow students to get a taste of machine learning app
 slug: 'htgr'
 link: 'https://docs.google.com/document/d/1FuPHk_PhNZAWpNcsGujs-phf0QcFouFUpNKO0hg_BMo/edit#heading=h.qk4nzxfetymm'
 github: 'https://github.com/cppsea/ML_HTGR'
-image: '../../assets/images/htgr_logo.png'
+image: '../../images/htgr_logo.png'
 members:
   - name: Prerna Joshi
     position: Lead
@@ -87,12 +87,12 @@ members:
             <img
               draggable="false"
               alt="community"
-              src="../../assets/tokens/connection.svg"
+              src="../../tokens/connection.svg"
             />
             <div class="content">
               <img
                 id="img1"
-                src="../../assets/images/htgrlstm.png"
+                src="../../images/htgrlstm.png"
                 alt="image"
               />
             </div>
@@ -101,13 +101,13 @@ members:
             <img
               draggable="false"
               alt="projects"
-              src="../../assets/tokens/rocket.svg"
+              src="../../tokens/rocket.svg"
             />
             <div class="content">
               <!-- <h3>Technologies</h3> -->
               <img
                 id="img1"
-                src="../../assets/images/htgrranf.png"
+                src="../../images/htgrranf.png"
                 alt="image"
               />
             </div>
@@ -115,13 +115,13 @@ members:
           <div class="benefit">
             <img
               draggable="false"
-              src="../../assets/tokens/compass.svg"
+              src="../../tokens/compass.svg"
               alt="image"
             />
             <div class="content">
               <img
                 id="img1"
-                src="../../assets/images/htgrsvm.png"
+                src="../../images/htgrsvm.png"
                 alt="image"
               />
             </div>

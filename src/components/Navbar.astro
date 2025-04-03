@@ -1,6 +1,9 @@
 ---
 const { pathname } = Astro.url;
 
+import { Image } from 'astro:assets';
+import logo from '../../public/images/sealogo.png';
+
 const listings = [
   {
     name: 'events',
@@ -28,7 +31,11 @@ const listings = [
 <nav>
   <div class='left'>
     <a href='/'>
-      <img id='sea-logo' src='../../assets/images/sealogo.png' />
+      <Image
+        id='sea-logo'
+        src={logo}
+        alt='Software Engineering Association (SEA) at Cal Poly Pomona'
+      />
     </a>
   </div>
 

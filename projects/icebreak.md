@@ -8,7 +8,7 @@ description: 'A platform for organizations to interact with their members. A
 slug: 'icebreak'
 link: 'https://docs.google.com/document/d/1ZCYVLDHku5bQwSiag0BUfmfLz0-fi81UZdy9it8S_LE/edit#heading=h.y0vf8994q9ef'
 github: 'https://github.com/cppsea/icebreak'
-image: '../../assets/images/icebreak_logo.png'
+image: '../../images/icebreak_logo.png'
 members:
   - name: Luke Dinh
     position: Project/Backend Lead
@@ -111,12 +111,12 @@ members:
         <img
           draggable='false'
           alt='community'
-          src='../../assets/tokens/connection.svg'
+          src='../../tokens/connection.svg'
         />
         <div class='content'>
           <img
             id='img1'
-            src='../../assets/images/icebreak_app1.png'
+            src='../../images/icebreak_app1.png'
             alt='icebreak app'
           />
         </div>
@@ -125,13 +125,13 @@ members:
         <img
           draggable='false'
           alt='projects'
-          src='../../assets/tokens/rocket.svg'
+          src='../../tokens/rocket.svg'
         />
         <div class='content'>
           <!-- <h3>Technologies</h3> -->
           <img
             id='img1'
-            src='../../assets/images/icebreak_app2.png'
+            src='../../images/icebreak_app2.png'
             alt='icebreak app'
           />
         </div>
