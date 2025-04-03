@@ -22,7 +22,7 @@ Any changes you make to files will automatically update on the server and refres
 
 ```text
 /
-├── assets/
+├── public/
 │   └── images/
 ├── projects/
 │   └── icebreak.md
