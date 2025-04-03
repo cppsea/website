@@ -6,7 +6,7 @@ description: 'A functioning website people will utilize in order to properly gau
 slug: 'cybrary'
 link: 'https://docs.google.com/document/d/1bHwypGTx2-bkWsJVSNd093zrQXPbj9pdybnejVu7fiI/edit#heading=h.x85lbhp0a2ju'
 github: 'https://www.cppsea.com/projects/cybrary/#:~:text=Learn%20More-,Github,-About%20The%20Project'
-image: '../../assets/images/cybrary_logo.png'
+image: '../../images/cybrary_logo.png'
 members:
   - name: Giovanni Zamora
     position: Project Lead
@@ -71,12 +71,12 @@ members:
             <img
               draggable="false"
               alt="projects"
-              src="../../assets/tokens/rocket.svg"
+              src="../../tokens/rocket.svg"
             />
             <div class="content">
               <img
                 id="img1"
-                src="../../assets/images/cybrary1.png"
+                src="../../images/cybrary1.png"
                 alt="image"
               />
             </div>
