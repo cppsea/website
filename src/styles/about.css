@@ -29,7 +29,8 @@ board .content {
   margin: auto 0;
 }
 
-board h3, p {
+board h3,
+p {
   margin-block: 0;
 }
 

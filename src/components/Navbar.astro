@@ -1,0 +1,51 @@
+---
+const { pathname } = Astro.url;
+
+const listings = [
+  {
+    name: 'events',
+    src: '/events',
+    newTab: false,
+  },
+  {
+    name: 'projects',
+    src: '/projects',
+    newTab: false,
+  },
+  {
+    name: 'about',
+    src: '/about',
+    newTab: false,
+  },
+  {
+    name: 'join',
+    src: 'https://forms.gle/4HRGjgPjaLXfdzDK7',
+    newTab: true,
+  },
+];
+---
+
+<nav>
+  <div class='left'>
+    <a href='/'>
+      <img id='sea-logo' src='../../assets/images/sealogo.png' />
+    </a>
+  </div>
+
+  <ul class='right'>
+    {
+      listings.map((item) => (
+        <li>
+          <a
+            href={item.src}
+            target={item.newTab ? '_blank' : ''}
+            rel={item.newTab ? 'noopener' : ''}
+            id={pathname.includes(item.src) ? 'active' : ''}
+          >
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
