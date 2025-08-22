@@ -12,7 +12,8 @@ section {
 }
 
 .board-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -70,6 +71,7 @@ section h1 {
 
 @media (max-width: 930px) {
   .board-container {
+    display: flex;
     justify-content: center;
   }
 }
