@@ -16,16 +16,27 @@ const board = [
     linkedin: 'https://linkedin.com/in/gloriele-mendoza',
   },
   {
-    name: 'Aashish Awadhani',
-    position: 'Treasurer',
-    avatar: '../images/aashish_awadhani.jpg',
-    linkedin: 'https://linkedin.com/in/aashish-awadhani',
+    name: 'Jan Rebolledo',
+    position: 'Website Developer',
+    avatar: '../images/jan_rebolledo.JPG',
+    linkedin: 'https://linkedin.com/in/janrebolledo',
+    website: 'https://janrebolledo.com',
   },
   {
-    name: 'Darren Banhthai',
-    position: 'Website Maintainer',
-    avatar: '../images/darren_banhthai.png',
-    linkedin: 'https://linkedin.com/in/darren-banhthai',
+    name: 'Yong Thu La Wong',
+    position: 'Treasurer',
+    avatar: '../images/yong_thu_la_wong.jpg',
+    linkedin: 'https://www.linkedin.com/in/yongthulawong/',
+  },
+  {
+    name: 'Kerry Kong',
+    position: 'Scheduler',
+    avatar: '../images/kerry_kong.jpg',
+  },
+  {
+    name: 'Ally Nguyen',
+    position: 'Secretary',
+    avatar: '../images/ally_nguyen.png',
   },
   {
     name: 'Yu Sun',
@@ -89,9 +100,11 @@ const founders = [
                 <h3>{member.name}</h3>
                 <p>{member.position}</p>
                 <div class='media-frame'>
-                  <a href={member.linkedin} target='_blank' rel='noopener'>
-                    <img class='social' src='../tokens/linkedin.svg' />
-                  </a>
+                  {member.linkedin && (
+                    <a href={member.linkedin} target='_blank' rel='noopener'>
+                      <img class='social' src='../tokens/linkedin.svg' />
+                    </a>
+                  )}
                   {member.website && (
                     <a href={member.website} target='_blank' rel='noopener'>
                       <img class='social' src='../tokens/website.svg' />
@@ -115,9 +128,11 @@ const founders = [
                 <h3>{member.name}</h3>
                 <p>{member.position}</p>
                 <div class='media-frame'>
-                  <a href={member.linkedin} target='_blank' rel='noopener'>
-                    <img class='social' src='../tokens/linkedin.svg' />
-                  </a>
+                  {member.linkedin && (
+                    <a href={member.linkedin} target='_blank' rel='noopener'>
+                      <img class='social' src='../tokens/linkedin.svg' />
+                    </a>
+                  )}
                   {member.website && (
                     <a href={member.website} target='_blank' rel='noopener'>
                       <img class='social' src='../tokens/website.svg' />

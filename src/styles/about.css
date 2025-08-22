@@ -52,6 +52,9 @@ board .media-frame {
 
 board .social {
   width: 20px;
+}
+
+.dark board .social {
   filter: invert();
 }
 
