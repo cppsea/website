@@ -6,7 +6,7 @@ description: 'A hands-on hub where students explore ML by building models on rea
 slug: 'htgr'
 link: 'https://docs.google.com/document/d/1FuPHk_PhNZAWpNcsGujs-phf0QcFouFUpNKO0hg_BMo/edit#heading=h.qk4nzxfetymm'
 github: 'https://github.com/cppsea/ML_HTGR'
-image: '../src/images/HTGR thumbnail.png'
+image: '../images/HTGR thumbnail.png'
 members:
   - name: Prerna Joshi
     position: Lead

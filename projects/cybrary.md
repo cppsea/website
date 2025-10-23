@@ -6,7 +6,7 @@ description: 'A collaborative wiki that helps students start and grow in machine
 slug: 'cybrary'
 link: 'https://docs.google.com/document/d/1bHwypGTx2-bkWsJVSNd093zrQXPbj9pdybnejVu7fiI/edit#heading=h.x85lbhp0a2ju'
 github: 'https://github.com/cppsea/CS-CENTRAL'
-image: '../src/images/cs catalog thumbnail.png'
+image: '../images/cs catalog thumbnail.png'
 members:
   - name: Giovanni Zamora
     position: Project Lead
