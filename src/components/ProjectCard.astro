@@ -1,0 +1,28 @@
+---
+import Project from '../icons/project.astro';
+
+const { project } = Astro.props;
+---
+
+<div class='flex flex-col md:grid md:grid-cols-2 gap-6 items-center group'>
+  <img class='rounded-2xl md:group-odd:order-2' src={project.image} />
+  <div class='flex flex-col gap-6'>
+    <p class='font-mono text-neutral-600'>
+      {project.date}
+    </p>
+    <p class='font-serif text-4xl'>{project.name}</p>
+    <ul class='flex gap-2 flex-wrap'>
+      {
+        project.tags.map((tag: any) => (
+          <li class='py-2 px-3.5 text-sm bg-[#C2E5F3] rounded-2xl'>{tag}</li>
+        ))
+      }
+    </ul>
+    <p>{project.description}</p>
+    <a
+      href={`/projects/${project.slug}`}
+      class='flex gap-2.5 px-4 py-3.5 rounded-xl items-center bg-sea text-white border border-solid border-neutral-300 w-max'
+      ><Project /> View Project</a
+    >
+  </div>
+</div>

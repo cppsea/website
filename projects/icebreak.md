@@ -1,14 +1,12 @@
 ---
 name: 'Icebreak'
-cardTitle: '🧊 Icebreak'
-date: 'Under Development - FALL 2022'
-description: 'A platform for organizations to interact with their members. A
-  central hub for members to be always updated on the latest events
-  while providing features to incentivize member growth.'
+date: "Fall '22 - Present"
+tags: ['App Development', 'Web Development', 'Backend Development']
+description: 'A hub for students to find out what’s happening on campus.'
 slug: 'icebreak'
 link: 'https://docs.google.com/document/d/1ZCYVLDHku5bQwSiag0BUfmfLz0-fi81UZdy9it8S_LE/edit#heading=h.y0vf8994q9ef'
 github: 'https://github.com/cppsea/icebreak'
-image: '../../images/icebreak_logo.png'
+image: '../src/images/Icebreak thumbnail.png'
 members:
   - name: Luke Dinh
     position: Project/Backend Lead
@@ -85,56 +83,25 @@ members:
     linkedin: https://www.linkedin.com/in/ryan-agatep-5a165825b/
 ---
 
-<section class='about block'>
-    <div class='left'>
-      <h1 class='title'>About The Project</h1>
-      <ul id='desc'>
-        <li>
-          Icebreak is SEA's platform to connect school organizations with their
-          members. Icebreak aims to be the central hub for members to remain
-          updated on current organization events. To create this application,
-          our team worked with React Native, a mobile friendly version of
-          React.js for the frontend. For the backend, Express.js was used as our
-          framework, and for the database, services like PostgreSQL and Prism
-          ORM (Object-relational mapping).
-        </li>
-        <li>
-          Using these technologies, Icebreak is able to function as a CRUD
-          application, and uses JSON Web Tokens as a means of signing into the
-          application. Future plans for Icebreak include the Guilds feature
-          being fully implemented, aka the basis of each club and organization.
-        </li>
-      </ul>
-    </div>
-    <div class='right'>
-      <div class='benefit'>
-        <img
-          draggable='false'
-          alt='community'
-          src='../../tokens/connection.svg'
-        />
-        <div class='content'>
-          <img
-            id='img1'
-            src='../../images/icebreak_app1.png'
-            alt='icebreak app'
-          />
-        </div>
-      </div>
-      <div class='benefit'>
-        <img
-          draggable='false'
-          alt='projects'
-          src='../../tokens/rocket.svg'
-        />
-        <div class='content'>
-          <!-- <h3>Technologies</h3> -->
-          <img
-            id='img1'
-            src='../../images/icebreak_app2.png'
-            alt='icebreak app'
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+# About The Project
+
+Icebreak is SEA's platform to connect school organizations with their
+members. Icebreak aims to be the central hub for members to remain
+updated on current organization events. To create this application,
+our team worked with React Native, a mobile friendly version of
+React.js for the frontend. For the backend, Express.js was used as our
+framework, and for the database, services like PostgreSQL and Prism
+ORM (Object-relational mapping).
+
+Using these technologies, Icebreak is able to function as a CRUD
+application, and uses JSON Web Tokens as a means of signing into the
+application. Future plans for Icebreak include the Guilds feature
+being fully implemented, aka the basis of each club and organization.
+
+![Community](../src/icons/connection.svg)
+
+![Icebreak App](../src/images/icebreak_app1.png)
+
+![Projects](../src/icons/rocket.svg)
+
+![Icebreak App](../src/images/icebreak_app2.png)

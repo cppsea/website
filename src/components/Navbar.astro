@@ -2,57 +2,77 @@
 const { pathname } = Astro.url;
 
 import { Image } from 'astro:assets';
-import logo from '../../public/images/sealogo.png';
+import logo from '../../public/images/triangle.png';
+
+import Group from '../icons/Group.astro';
 
 const listings = [
   {
-    name: 'events',
-    src: '/events',
+    name: 'About',
+    src: '/#about',
     newTab: false,
+    memberIcon: false,
   },
   {
-    name: 'projects',
-    src: '/projects',
+    name: 'Projects',
+    src: '/#projects',
     newTab: false,
+    memberIcon: false,
   },
   {
-    name: 'about',
-    src: '/about',
+    name: 'Events',
+    src: '/#events',
     newTab: false,
+    memberIcon: false,
   },
   {
-    name: 'join',
+    name: 'Become a Member',
     src: 'https://forms.gle/4HRGjgPjaLXfdzDK7',
     newTab: true,
+    memberIcon: true,
   },
 ];
 ---
 
-<nav>
-  <div class='left'>
-    <a href='/'>
+<header class='fixed left-0 top-0 right-0 z-10'>
+  <nav
+    class='container mx-auto flex justify-between items-center py-12 px-6 xl:px-48 z-10'
+  >
+    <a href='/' class='font-bold flex gap-1.5 text-2xl items-center'>
       <Image
         id='sea-logo'
         src={logo}
         alt='Software Engineering Association (SEA) at Cal Poly Pomona'
+        class='size-6'
       />
+      SEA
     </a>
-  </div>
 
-  <ul class='right'>
-    {
-      listings.map((item) => (
-        <li>
-          <a
-            href={item.src}
-            target={item.newTab ? '_blank' : ''}
-            rel={item.newTab ? 'noopener' : ''}
-            id={pathname.includes(item.src) ? 'active' : ''}
-          >
-            {item.name}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</nav>
+    <ul class='flex items-center gap-9'>
+      {
+        listings.map((item) => (
+          <li>
+            <a
+              href={item.src}
+              target={item.newTab ? '_blank' : ''}
+              rel={item.newTab ? 'noopener' : ''}
+              id={pathname.includes(item.src) ? 'active' : ''}
+              class:list={[
+                item.memberIcon
+                  ? 'bg-white border-neutral-300 border rounded-xl flex gap-2.5 items-center px-4 py-3.5 whitespace-nowrap'
+                  : 'hidden md:block',
+              ]}
+            >
+              {item.memberIcon && <Group class='min-w-4 min-h-4 size-4' />}
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div
+    class='absolute bg-white top-0 left-0 right-0 bottom-0 -z-10 pointer-events-none backdrop-blur-xs header-mask'
+  >
+  </div>
+</header>

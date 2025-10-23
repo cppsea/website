@@ -1,51 +1,52 @@
 ---
 const SOCIALS = [
   {
-    name: 'instagram',
+    name: 'Instagram',
     url: 'https://www.instagram.com/cpp.sea/',
   },
   {
-    name: 'linkedin',
+    name: 'LinkedIn',
     url: 'https://www.linkedin.com/company/cpp-sea',
   },
   {
-    name: 'github',
+    name: 'GitHub',
     url: 'https://github.com/cppsea',
   },
   {
-    name: 'discord',
+    name: 'Discord',
     url: 'https://discord.gg/3FJNHyJ6P6',
   },
 ];
 ---
 
-<footer>
-  <div id='footer-container'>
-    <div id='branding'>
-      <a href='/'><img src='/images/full-logo.png' /></a>
-    </div><div id='social'>
-      <h3>Social</h3>
-      <ul>
-        <!-- Create a list item, with an anchor tag linking to every social media -->
-        {
-          SOCIALS.map((social) => (
-            <li>
-              <a href={social.url}>{social.name}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </div><div id='routes'>
-      <h3>More</h3><ul>
-        <li><a href='../../events'>events</a></li>
-        <li><a href='../../projects'>projects</a></li>
-        <li><a href='../../about'>about</a></li><li>
-          <a href='https://forms.gle/4HRGjgPjaLXfdzDK7'>join</a>
-        </li>
-      </ul>
-    </div>
-  </div><div id='copyright'>
-    &copy; {new Date().getFullYear()} SOFTWARE ENGINEERING ASSOCIATION AT CAL POLY
-    POMONA &bull; ALL RIGHTS RESERVED
+<footer class='container mx-auto py-12 px-6 xl:px-48 grid md:grid-cols-5 gap-5'>
+  <div class='md:col-span-2'>
+    <p>Software Engineering Association</p>
+    <p>Cal Poly Pomona</p>
+    <p>College of Engineering</p>
+    <p>&copy; {new Date().getFullYear()}.</p>
   </div>
+  <ul class='underline'>
+    {
+      SOCIALS.map((social) => (
+        <li>
+          <a href={social.url}>{social.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <ul class='underline'>
+    <li><a href='/#events'>Events</a></li>
+    <li><a href='/#projects'>Projects</a></li>
+    <li><a href='/#about'>About</a></li><li>
+      <a href='https://forms.gle/4HRGjgPjaLXfdzDK7'>Join</a>
+    </li>
+  </ul>
+  <p class='text-neutral-600'>
+    Made with 🫶 by <a
+      href='https://janrebolledo.com'
+      target='_blank'
+      class='underline'>Jan Rebolledo</a
+    > &apos;25
+  </p>
 </footer>

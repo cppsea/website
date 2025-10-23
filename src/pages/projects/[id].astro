@@ -1,94 +1,88 @@
 ---
+import { Image } from 'astro:assets';
+import Member from '../../components/Member.astro';
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/home.css';
-import '../../styles/project.css';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
   return projects.map((project: any) => ({
     params: { id: project.data.slug },
-    props: { project },
+    props: { content: project },
   }));
 }
-const { project } = Astro.props;
-const { Content } = await render(project);
+const { content } = Astro.props;
+const { Content } = await render(content);
+const project = content.data;
+import texture from '../../images/papertexture.jpeg';
+import Document from '../../icons/document.astro';
+import Github from '../../icons/github.astro';
 ---
 
 <Layout
-  title={`${project.data.name} - SEA`}
-  description={project.data.description}
-  image={project.data.image}
+  title={`${project.name} - SEA`}
+  description={project.description}
+  image={project.image}
 >
   <main>
-    <section class='hero'>
-      <div class='content'>
-        <h1 class='title'>{project.data.name}</h1>
-
-        <h2 class='date'>{project.data.date}</h2>
-        <p>
-          {project.data.description}
-        </p>
-        <div class='anchors'>
-          <a class='btn-arrow' target='_blank' href={project.data.link}>
-            <span>Learn More</span>
-            <svg width='10' height='16' viewBox='0 0 10 16'>
-              <path
-                d='M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z'
-              ></path>
-            </svg>
-          </a>
-        </div>
-        <div class='anchors'>
-          <a class='btn-arrow' target='_blank' href={project.data.github}>
-            <span>GitHub</span>
-            <svg width='10' height='16' viewBox='0 0 10 16'>
-              <path
-                d='M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z'
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class='delta-in-triangle'>
+    <section class='relative'>
+      <div
+        class='absolute object-cover top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-b from-white via-transparent to-70% to-white'
+      >
+        <Image
+          src={texture}
+          alt=''
+          quality={40}
+          class='z-0 w-full h-full object-cover absolute mix-blend-overlay'
+        />
         <img
-          draggable='false'
-          src={project.data.image}
-          alt='test icebreak logo'
+          src={project.image}
+          alt={project.name}
+          class='-z-10 w-full h-full object-cover absolute'
         />
       </div>
-    </section>
-    <Content />
-    <section class='team-members block'>
-      <h1 class='title'>The Team</h1>
-      <div class='members'>
-        {
-          project.data.members.map((member: any) => (
-            <member>
-              <div class='content'>
-                <h3>{member.name}</h3>
-                <p>{member.position}</p>
-                <div class='media-frame'>
-                  {member.linkedin && (
-                    <a href={member.linkedin} target='_blank' rel='noopener'>
-                      <img class='social' src='../../tokens/linkedin.svg' />
-                    </a>
-                  )}
-                  {member.github && (
-                    <a href={member.github} target='_blank' rel='noopener'>
-                      <img class='social' src='../../tokens/github.svg' />
-                    </a>
-                  )}
-                  {member.website && (
-                    <a href={member.website} target='_blank' rel='noopener'>
-                      <img class='social' src='../../tokens/website.svg' />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </member>
-          ))
-        }
+      <div
+        class='h-[600px] flex items-center justify-end flex-col gap-6 z-0 relative bg-white/85'
+      >
+        <p class='font-mono text-neutral-600 text-center px-6'>
+          {project.date}
+        </p>
+        <h1 class='text-5xl md:text-6xl font-serif text-center px-6'>
+          {project.name}
+        </h1>
+        <p class='text-neutral-600 text-center px-6 md:max-w-[480px] mx-auto'>
+          {project.description}
+        </p>
+        <div class='px-6 flex gap-2'>
+          <a
+            href={project.link}
+            target='_blank'
+            rel='noopener'
+            class='flex gap-2.5 px-4 py-3.5 rounded-xl items-center bg-sea text-white border border-solid border-neutral-300'
+            ><Document /> Design Document</a
+          >
+          <a
+            href={project.github}
+            target='_blank'
+            rel='noopener'
+            class='bg-white border-neutral-300 border rounded-xl flex gap-2.5 items-center px-4 py-3.5 whitespace-nowrap'
+          >
+            <Github />
+            View GitHub
+          </a>
+        </div>
       </div>
     </section>
+
+    <section
+      class='prose mx-auto prose-neutral prose-headings:font-medium mt-24 p-6'
+    >
+      <Content />
+    </section>
   </main>
+  <section class='py-12 p-6 flex items-center justify-center gap-6 flex-col'>
+    <h1 class='text-2xl text-center'>The Team</h1>
+    <div class='grid md:grid-cols-2 gap-12 w-full md:max-w-[600px]'>
+      {project.members.map((member: any) => <Member member={member} />)}
+    </div>
+  </section>
 </Layout>

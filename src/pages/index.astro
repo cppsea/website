@@ -1,6 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/home.css';
+import { Image } from 'astro:assets';
+import heroImage from '../images/hero.png';
+import sealImage from '../images/sealdrawing.png';
+import Calendar from '../icons/calendar.astro';
+
+import apple from '../images/apple.png';
+import meta from '../images/meta.png';
+import amazon from '../images/amazon.png';
+import microsoft from '../images/microsoft.png';
+
+import noteTexture from '../images/notetexture.png';
+
+import { getCollection } from 'astro:content';
+const projects = await getCollection('projects');
+
+import { board, founders } from '../board';
+
+import Member from '../components/Member.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <Layout
@@ -8,234 +26,150 @@ import '../styles/home.css';
   description='Become part of the largest software engineering community at Cal Poly Pomona.'
 >
   <main>
-    <section class='hero'>
-      <div class='content'>
-        <h3 class='pre-title'>Actually start</h3>
-        <h1 class='title'>Learn by doing.</h1>
-        <p>
-          Become part of the largest software engineering community at Cal Poly
-          Pomona. Put software lifecyles methodologies, version control,
-          documentation, data structures & algorithms into practice.
+    <section class='relative' id='home'>
+      <div
+        class='h-[600px] flex items-center justify-center flex-col gap-6 z-0 relative p-6'
+      >
+        <Image src={sealImage} alt='Seal Drawing' class='size-28' />
+        <h1 class='text-5xl md:text-6xl font-serif text-center'>
+          <i>Build</i> With Us
+        </h1>
+        <p class='text-neutral-600 text-center'>
+          Cal Poly Pomona&apos;s premier project incubator.
         </p>
-        <div class='anchors'>
-          <a class='btn-arrow' href='/events/'>
-            <span>explore events</span>
-            <svg width='10' height='16' viewBox='0 0 10 16'>
-              <path
-                d='M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z'
-              ></path>
-            </svg>
-          </a>
-        </div>
+        <a
+          href='#events'
+          class='flex gap-2.5 px-4 py-3.5 rounded-xl items-center bg-sea text-white border border-solid border-neutral-300'
+          ><Calendar /> View Upcoming Events</a
+        >
       </div>
-      <div class='delta-in-triangle'>
-        <img
-          draggable='false'
-          src='./images/seal-in-triangle.png'
-          alt='delta inside of a triangle'
-        />
-      </div>
+      <Image
+        src={heroImage}
+        alt='Hero'
+        class='absolute object-cover top-0 left-0 right-0 bottom-0 w-full h-full -z-10'
+      />
     </section>
-    <section class='about block'>
-      <div class='left'>
-        <h1 class='title'>ACTUALLY START LEARNING BY DOING</h1>
-        <p>
-          We're a community open to people of all backgrounds and skill levels.
-          There is absolutely <b>no</b> membership fees. The only requirement is
-          your interest in software engineering.
-        </p>
-        <div class='anchors'>
-          <a
-            class='btn-arrow'
-            target='_blank'
-            rel='noopener'
-            href='https://forms.gle/4HRGjgPjaLXfdzDK7'
-          >
-            <span>Sign up</span>
-            <svg width='10' height='16' viewBox='0 0 10 16'>
-              <path
-                d='M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z'
-              ></path>
-            </svg>
-          </a>
-        </div>
+    <section id='about'>
+      <div class='flex items-center justify-center flex-col gap-6 p-6'>
+        <p class='font-mono text-neutral-600 text-center'>Who</p>
+        <h2
+          class='text-3xl md:text-4xl text-center md:max-w-[480px] leading-11'
+        >
+          We are a 🎒 student-led community of 🎨 creatives & 🧑‍💻developers with
+          a passion for <span
+            class='underline decoration-sea decoration-wavy underline-offset-4'
+            >learning by doing</span
+          >.
+        </h2>
       </div>
-      <div class='right'>
-        <div class='benefit'>
-          <img
-            draggable='false'
-            alt='community'
-            src='./tokens/connection.svg'
+      <div class='py-12'>
+        <p class='font-mono text-neutral-600 text-center'>
+          Where Our Members Work
+        </p>
+        <div
+          class='md:flex gap-6 md:gap-12 items-center justify-center grid grid-cols-2 place-items-center px-12'
+        >
+          <Image
+            src={apple}
+            alt='Apple'
+            class='w-full h-full aspect-square md:size-32'
           />
-          <div class='content'>
-            <h3>Community</h3>
-            <p>
-              Over 200+ members, with the interest of software engineering at
-              Cal Poly Pomona.
-            </p>
-          </div>
+          <Image
+            src={meta}
+            alt='Meta'
+            class='w-full h-full aspect-square md:size-32'
+          />
+          <Image
+            src={amazon}
+            alt='Amazon'
+            class='w-full h-full aspect-square md:size-32'
+          />
+          <Image
+            src={microsoft}
+            alt='Microsoft'
+            class='w-full h-full aspect-square md:size-32'
+          />
+          <p class='col-span-2 text-center'>+ More</p>
         </div>
-        <div class='benefit'>
-          <img draggable='false' alt='projects' src='./tokens/rocket.svg' />
-          <div class='content'>
-            <h3>Projects</h3>
-            <p>Collaborate with collegeues by putting your skills into use.</p>
+      </div>
+      <div class='flex items-center justify-center flex-col gap-6 p-6'>
+        <p class='font-mono text-neutral-600 text-center'>What</p>
+        <div class='flex items-center justify-center flex-wrap pt-12'>
+          <div class='w-72 h-64 relative drop-shadow-lg -rotate-3'>
+            <div
+              class='w-full h-full flex items-center justify-center text-center flex-col p-6'
+            >
+              <span class='text-4xl'>❤️️</span>
+              <h3 class='text-4xl mb-2'>Community</h3>
+              <p>A small blurb about our community</p>
+            </div>
+            <Image
+              src={noteTexture}
+              alt='Note Texture'
+              class='absolute object-cover w-full h-full top-0 left-0 right-0 bottom-0 -z-10'
+            />
           </div>
-        </div>
-        <div class='benefit'>
-          <img draggable='false' alt='workshops' src='./tokens/compass.svg' />
-          <div class='content'>
-            <h3>Workshops</h3>
-            <p>
-              Guest speakers, version control, trending technologies, resume
-              tips, data structure & algorithms
-            </p>
+          <div class='w-72 h-64 relative drop-shadow-lg rotate-[8deg]'>
+            <div
+              class='w-full h-full flex items-center justify-center text-center flex-col p-6'
+            >
+              <span class='text-4xl'>📁</span>
+              <h3 class='text-4xl mb-2'>Projects</h3>
+              <p>A small blurb about our projects</p>
+            </div>
+            <Image
+              src={noteTexture}
+              alt='Note Texture'
+              class='absolute object-cover w-full h-full top-0 left-0 right-0 bottom-0 -z-10'
+            />
+          </div>
+          <div class='w-72 h-64 relative drop-shadow-lg -rotate-[4deg]'>
+            <div
+              class='w-full h-full flex items-center justify-center text-center flex-col p-6'
+            >
+              <span class='text-4xl'>🛠️</span>
+              <h3 class='text-4xl mb-2'>Workshops</h3>
+              <p>A small blurb about our workshops</p>
+            </div>
+            <Image
+              src={noteTexture}
+              alt='Note Texture'
+              class='absolute object-cover w-full h-full top-0 left-0 right-0 bottom-0 -z-10'
+            />
           </div>
         </div>
       </div>
     </section>
-    <section class='event-container block'>
-      <div class='right'>
-        <h1>Events</h1>
-        <div class='events'>
-          <center>
-            <svg
-              version='1.1'
-              id='loader-1'
-              xmlns='http://www.w3.org/2000/svg'
-              xmlns:xlink='http://www.w3.org/1999/xlink'
-              x='0px'
-              y='0px'
-              width='100px'
-              height='100px'
-              viewBox='0 0 50 50'
-              xml:space='preserve'
-            >
-              <path
-                fill='#27c2fc'
-                d='M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z'
-              >
-                <animateTransform
-                  attributeType='xml'
-                  attributeName='transform'
-                  type='rotate'
-                  from='0 25 25'
-                  to='360 25 25'
-                  dur='0.6s'
-                  repeatCount='indefinite'></animateTransform>
-              </path>
-            </svg>
-            <h2>Fetching Events</h2>
-          </center>
+    <section id='projects' class='py-12'>
+      <div class='flex items-center justify-center flex-col gap-6 p-6'>
+        <p class='font-mono text-neutral-600 text-center'>Projects</p>
+        <div class='md:px-24 lg:px-64 flex flex-col gap-16'>
+          {projects.map((project) => <ProjectCard project={project.data} />)}
         </div>
       </div>
-      <div class='left'>
-        <h1 class='title'>Where there's a bug there's a way</h1>
-        <p>
-          From reviewing of data structures and algorithms to preparing for
-          interviews into diving in the latest technologies used in the
-          industry. It ain't much, but it's honest work.
-        </p>
-        <div class='anchors'>
-          <a class='btn-arrow' href='/events/'>
-            <span>more events</span>
-            <svg width='10' height='16' viewBox='0 0 10 16'>
-              <path
-                d='M1.93286 16L9.93286 8L1.93286 0L0.0672302 1.8672L6.20009 8.00006L0.0672302 14.1329L1.93286 16Z'
-              ></path>
-            </svg>
-          </a>
+    </section>
+    <section id='events' class='py-12'>
+      <div class='flex items-center justify-center flex-col gap-6 p-6'>
+        <p class='font-mono text-neutral-600 text-center'>When</p>
+        <iframe
+          src='https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&showTz=0&showNav=0&showPrint=0&showCalendars=0&src=Y3Bwc2VhMjAyMUBnbWFpbC5jb20&color=%23039be5'
+          class='w-full aspect-square md:aspect-auto md:px-24 lg:px-64 md:h-72'
+          frameborder='0'
+          scrolling='no'></iframe>
+      </div>
+    </section>
+    <section id='board' class='py-12'>
+      <div class='flex items-center justify-center flex-col gap-6 p-6'>
+        <p class='font-mono text-neutral-600 text-center'>Us</p>
+        <h2 class='text-2xl text-center'>Our Board</h2>
+        <div class='grid md:grid-cols-2 gap-12 w-full md:max-w-[600px]'>
+          {board.map((member) => <Member member={member} />)}
+        </div>
+        <h2 class='text-2xl text-center mt-24'>Our Founders</h2>
+        <div class='grid md:grid-cols-2 gap-12 w-full md:max-w-[600px]'>
+          {founders.map((member) => <Member member={member} />)}
         </div>
       </div>
     </section>
   </main>
-
-  <script type='text/javascript'>
-    const SPREADSHEET_ID = '1V9EnPDW7JZFJf8ncFZgseljh59JvcO3Gc1bMRuh04hs';
-    const GOOGLE_KEY_TOKEN = 'AIzaSyBcbBOtcmoCwJA7G34oUd5wdJHm_Q_tWsE';
-    const RANGE = 'Events';
-
-    const eventContainer = document.querySelector(
-      '.event-container .right .events'
-    );
-
-    function createEvent(props) {
-      const { title, startDate, endDate, location, description } = props;
-
-      const startingDate = new Date(startDate).toLocaleDateString('en-US', {
-        day: 'numeric',
-        month: 'numeric',
-      });
-      const startingTime = new Date(startDate).toLocaleTimeString('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-      });
-      const endingTime = new Date(endDate).toLocaleTimeString('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-      });
-
-      const card = document.createElement('div');
-      card.classList.add('card');
-
-      const isLocationURL = location.includes('http');
-
-      card.innerHTML = `
-    <div class="date gradient">
-      <h1>${startingDate}</h1>
-    </div>
-    <div class="content">
-      <span class="darken-text">${!isLocationURL ? `${location} @ ` : ''}${startingTime} - ${endingTime} </span>
-      <h1>${title}</h1>
-      <p class="darken-text">${description}</p>
-    </div>
-  `;
-
-      return card;
-    }
-
-    (async function () {
-      try {
-        const request = await fetch(
-          `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${GOOGLE_KEY_TOKEN}`
-        );
-        const response = await request.json();
-
-        const header = response.values[0];
-        const events = response.values.slice(1);
-        const payload = [];
-        for (let row = 0; row < events.length; row++) {
-          const map = {};
-          for (let col = 0; col < events[0].length; col++) {
-            // Normalize the keys so it's camelCase.
-            let key = header[col].replace(/\s+/, '');
-            key = key.charAt(0).toLowerCase() + key.slice(1);
-            map[key] = events[row][col];
-          }
-          payload.push(map);
-        }
-
-        if (payload.length == 0) {
-          eventContainer.innerHTML = `There's currently no upcoming events at this time. Please check again later.`;
-          return;
-        }
-
-        // Sorts all the fetched events by the end date.
-        payload.sort(
-          (a, b) =>
-            new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
-        );
-
-        // Clears the loading message.
-        eventContainer.innerHTML = '';
-        payload.forEach((props) => {
-          const component = createEvent(props);
-          eventContainer.appendChild(component);
-        });
-      } catch (error) {
-        eventContainer.innerHTML = `Failed to load events. (${error.message})`;
-        console.log(error);
-      }
-    })();
-  </script>
 </Layout>

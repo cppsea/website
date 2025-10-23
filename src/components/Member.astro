@@ -1,0 +1,46 @@
+---
+const { member } = Astro.props;
+import Linkedin from '../icons/linkedin.astro';
+import Globe from '../icons/globe.astro';
+import Github from '../icons/github.astro';
+import { Image } from 'astro:assets';
+---
+
+<div class='flex items-center gap-4'>
+  {
+    member.avatar && (
+      <Image
+        src={member.avatar}
+        alt={member.name}
+        class='size-16 aspect-square object-cover'
+      />
+    )
+  }
+  <div>
+    <p>{member.name}</p>
+    <p class='text-neutral-600'>{member.position}</p>
+  </div>
+  <div class='flex grow justify-end gap-2'>
+    {
+      member.website && (
+        <a href={member.website}>
+          <Globe class='size-6' />
+        </a>
+      )
+    }
+    {
+      member.linkedin && (
+        <a href={member.linkedin}>
+          <Linkedin class='size-6' />
+        </a>
+      )
+    }
+    {
+      member.github && (
+        <a href={member.github}>
+          <Github class='size-6' />
+        </a>
+      )
+    }
+  </div>
+</div>

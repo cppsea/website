@@ -5,6 +5,9 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
 const { title, description, image } = Astro.props;
+
+import grain from '../images/grain.png';
+import { Image } from 'astro:assets';
 ---
 
 <html lang='en'>
@@ -58,16 +61,14 @@ const { title, description, image } = Astro.props;
       gtag('config', 'G-0HCHCC9XSL');
     </script>
   </head>
-  <Navbar />
-  <slot />
-  <Footer />
-  <script is:inline>
-    // Adds dark theme based on system theme
-    if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
+  <body class='font-sans'>
+    <Navbar />
+    <slot />
+    <Footer />
+    <Image
+      src={grain}
+      alt='Grain Texture'
+      class='fixed top-0 bottom-0 left-0 right-0 w-full h-full opacity-20 pointer-events-none object-fill mix-blend-darken'
+    />
+  </body>
 </html>
