@@ -4,28 +4,28 @@
 @font-face {
   font-family: 'PP Editorial New';
   font-weight: 400;
-  src: url('fonts/PPEditorialNew-Regular.otf');
+  src: url('/fonts/PPEditorialNew-Regular.otf');
 }
 @font-face {
   font-family: 'PP Editorial New';
   font-style: italic;
   font-weight: 400;
-  src: url('fonts/PPEditorialNew-Italic.otf');
+  src: url('/fonts/PPEditorialNew-Italic.otf');
 }
 @font-face {
   font-family: 'PP Neue Montreal';
   font-weight: 500;
-  src: url('fonts/PPNeueMontreal-Medium.otf');
+  src: url('/fonts/PPNeueMontreal-Medium.otf');
 }
 @font-face {
   font-family: 'PP Neue Montreal';
   font-weight: 700;
-  src: url('fonts/PPNeueMontreal-Bold.otf');
+  src: url('/fonts/PPNeueMontreal-Bold.otf');
 }
 @font-face {
   font-family: 'ABC Favorit Mono';
   font-weight: 400;
-  src: url('fonts/ABC Favorit Mono Regular.ttf');
+  src: url('/fonts/ABC Favorit Mono Regular.ttf');
 }
 .font-serif {
   font-family: 'PP Editorial New';
