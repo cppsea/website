@@ -7,6 +7,7 @@ slug: 'icebreak'
 link: 'https://docs.google.com/document/d/1ZCYVLDHku5bQwSiag0BUfmfLz0-fi81UZdy9it8S_LE/edit#heading=h.y0vf8994q9ef'
 github: 'https://github.com/cppsea/icebreak'
 image: '/images/Icebreak thumbnail.png'
+featured: false
 members:
   - name: Luke Dinh
     position: Project/Backend Lead

@@ -60,15 +60,19 @@ import Github from '../../icons/github.astro';
             class='flex gap-2.5 px-4 py-3.5 rounded-xl items-center bg-sea text-white border border-solid border-neutral-300'
             ><Document /> Design Document</a
           >
-          <a
-            href={project.github}
-            target='_blank'
-            rel='noopener'
-            class='bg-white border-neutral-300 border rounded-xl flex gap-2.5 items-center px-4 py-3.5 whitespace-nowrap'
-          >
-            <Github />
-            View GitHub
-          </a>
+          {
+            project.github && (
+              <a
+                href={project.github}
+                target='_blank'
+                rel='noopener'
+                class='bg-white border-neutral-300 border rounded-xl flex gap-2.5 items-center px-4 py-3.5 whitespace-nowrap'
+              >
+                <Github />
+                View GitHub
+              </a>
+            )
+          }
         </div>
       </div>
     </section>

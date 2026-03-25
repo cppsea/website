@@ -7,6 +7,7 @@ slug: 'htgr'
 link: 'https://docs.google.com/document/d/1FuPHk_PhNZAWpNcsGujs-phf0QcFouFUpNKO0hg_BMo/edit#heading=h.qk4nzxfetymm'
 github: 'https://github.com/cppsea/ML_HTGR'
 image: '/images/HTGR thumbnail.png'
+featured: false
 members:
   - name: Prerna Joshi
     position: Lead

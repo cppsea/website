@@ -150,32 +150,42 @@ import ProjectCard from '../components/ProjectCard.astro';
       <div class='flex items-center justify-center flex-col gap-6 p-6'>
         <p class='font-mono text-neutral-600 text-center'>Projects</p>
         <div class='md:px-24 lg:px-64 flex flex-col gap-16'>
-          {projects.map((project) => <ProjectCard project={project.data} />)}
+          {
+            projects
+              .filter((project) => project.data.featured === true)
+              .map((project) => <ProjectCard project={project.data} />)
+          }
         </div>
+        <a
+          href='/projects'
+          class='mt-12 flex gap-2.5 px-4 py-3.5 rounded-xl items-center bg-sea text-white border border-solid border-neutral-300'
+        >
+          View Previous Projects</a
+        >
       </div>
-    </section>
-    <section id='events' class='py-12'>
-      <div class='flex items-center justify-center flex-col gap-6 p-6'>
-        <p class='font-mono text-neutral-600 text-center'>When</p>
-        <iframe
-          src='https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&showTz=0&showNav=0&showPrint=0&showCalendars=0&src=Y3Bwc2VhMjAyMUBnbWFpbC5jb20&color=%23039be5'
-          class='w-full aspect-square md:aspect-auto md:px-24 lg:px-64 md:h-72'
-          frameborder='0'
-          scrolling='no'></iframe>
-      </div>
-    </section>
-    <section id='board' class='py-12'>
-      <div class='flex items-center justify-center flex-col gap-6 p-6'>
-        <p class='font-mono text-neutral-600 text-center'>Us</p>
-        <h2 class='text-2xl text-center'>Our Board</h2>
-        <div class='grid md:grid-cols-2 gap-12 w-full md:max-w-[600px]'>
-          {board.map((member) => <Member member={member} />)}
+      <section id='events' class='py-12'>
+        <div class='flex items-center justify-center flex-col gap-6 p-6'>
+          <p class='font-mono text-neutral-600 text-center'>When</p>
+          <iframe
+            src='https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&showTz=0&showNav=0&showPrint=0&showCalendars=0&src=Y3Bwc2VhMjAyMUBnbWFpbC5jb20&color=%23039be5'
+            class='w-full aspect-square md:aspect-auto md:px-24 lg:px-64 md:h-72'
+            frameborder='0'
+            scrolling='no'></iframe>
         </div>
-        <h2 class='text-2xl text-center mt-24'>Our Founders</h2>
-        <div class='grid md:grid-cols-2 gap-12 w-full md:max-w-[600px]'>
-          {founders.map((member) => <Member member={member} />)}
+      </section>
+      <section id='board' class='py-12'>
+        <div class='flex items-center justify-center flex-col gap-6 p-6'>
+          <p class='font-mono text-neutral-600 text-center'>Us</p>
+          <h2 class='text-2xl text-center'>Our Board</h2>
+          <div class='grid md:grid-cols-2 gap-12 w-full md:max-w-[600px]'>
+            {board.map((member) => <Member member={member} />)}
+          </div>
+          <h2 class='text-2xl text-center mt-24'>Our Founders</h2>
+          <div class='grid md:grid-cols-2 gap-12 w-full md:max-w-[600px]'>
+            {founders.map((member) => <Member member={member} />)}
+          </div>
         </div>
-      </div>
+      </section>
     </section>
   </main>
 </Layout>

@@ -7,6 +7,7 @@ slug: 'cybrary'
 link: 'https://docs.google.com/document/d/1bHwypGTx2-bkWsJVSNd093zrQXPbj9pdybnejVu7fiI/edit#heading=h.x85lbhp0a2ju'
 github: 'https://github.com/cppsea/CS-CENTRAL'
 image: '/images/cs catalog thumbnail.png'
+featured: false
 members:
   - name: Giovanni Zamora
     position: Project Lead
