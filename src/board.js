@@ -1,7 +1,7 @@
 import giovanni from './images/giovanni_zamora.jpg';
 import gloriele from './images/gloriele_mendoza.jpg';
 import jan from './images/jan_rebolledo.JPG';
-import yong from './images/yong_thu_la_wong.jpg';
+import ryan from './images/ryan_beacham.png';
 import kerry from './images/kerry_kong.jpg';
 import ally from './images/ally_nguyen.png';
 import claudia from './images/claudia_gahung.png';
@@ -33,10 +33,10 @@ export const board = [
     website: 'https://janrebolledo.com',
   },
   {
-    name: 'Yong Thu La Wong',
+    name: 'Ryan Beacham',
     position: 'Treasurer',
-    avatar: yong,
-    linkedin: 'https://www.linkedin.com/in/yongthulawong/',
+    avatar: ryan,
+    linkedin: 'https://www.linkedin.com/in/ryanbeacham/',
   },
   {
     name: 'Kerry Kong',
@@ -53,6 +53,21 @@ export const board = [
     position: 'Marketing Chair',
     avatar: claudia,
     linkedin: 'https://www.linkedin.com/in/claudia-gahung-489288311/',
+  },
+  {
+    name: 'Alina Avramenko',
+    position: 'Outreach Chair',
+    avatar: seal,
+  },
+  {
+    name: 'Danica',
+    position: 'Social Chair',
+    avatar: seal,
+  },
+  {
+    name: 'Jacob',
+    position: 'Project Manager',
+    avatar: seal,
   },
   {
     name: 'Yu Sun',
