@@ -1,11 +1,8 @@
 import giovanni from './images/giovanni_zamora.jpg';
-import gloriele from './images/gloriele_mendoza.jpg';
 import jan from './images/jan_rebolledo.JPG';
 import ryan from './images/ryan_beacham.png';
 import kerry from './images/kerry_kong.jpg';
 import ally from './images/ally_nguyen.png';
-import claudia from './images/claudia_gahung.png';
-import yu from './images/yu_sun.jpg';
 
 import seal from './images/seal.jpeg';
 import samuel from './images/samuel_foster.jpeg';
@@ -14,16 +11,27 @@ import anirban from './images/anirban_manna.jpeg';
 
 export const board = [
   {
+    name: 'Kerry Kong',
+    position: 'Scheduler',
+    avatar: kerry,
+    linkedin: 'https://www.linkedin.com/in/kerry-kong-cs/',
+  },
+  {
     name: 'Giovanni Zamora',
     position: 'President',
     avatar: giovanni,
     linkedin: 'https://www.linkedin.com/in/giovanni-zamora-900368250/',
   },
   {
-    name: 'Gloriele Mendoza',
-    position: 'Project Manager',
-    avatar: gloriele,
-    linkedin: 'https://linkedin.com/in/gloriele-mendoza',
+    name: 'Cleucil Kaculo T Da Costa Francisco',
+    position: 'Treasurer',
+    avatar: seal,
+  },
+  {
+    name: 'Ryan Beacham',
+    position: 'Scheduler',
+    avatar: ryan,
+    linkedin: 'https://www.linkedin.com/in/ryanbeacham/',
   },
   {
     name: 'Jan Rebolledo',
@@ -33,26 +41,14 @@ export const board = [
     website: 'https://janrebolledo.com',
   },
   {
-    name: 'Ryan Beacham',
-    position: 'Treasurer',
-    avatar: ryan,
-    linkedin: 'https://www.linkedin.com/in/ryanbeacham/',
-  },
-  {
-    name: 'Kerry Kong',
-    position: 'Scheduler',
-    avatar: kerry,
-  },
-  {
     name: 'Ally Nguyen',
     position: 'Secretary',
     avatar: ally,
   },
   {
-    name: 'Claudia Gahung',
-    position: 'Marketing Chair',
-    avatar: claudia,
-    linkedin: 'https://www.linkedin.com/in/claudia-gahung-489288311/',
+    name: 'Jacob Medel',
+    position: 'Project Manager',
+    avatar: seal,
   },
   {
     name: 'Alina Avramenko',
@@ -60,21 +56,9 @@ export const board = [
     avatar: seal,
   },
   {
-    name: 'Danica',
+    name: 'Danica Jacutin',
     position: 'Social Chair',
     avatar: seal,
-  },
-  {
-    name: 'Jacob',
-    position: 'Project Manager',
-    avatar: seal,
-  },
-  {
-    name: 'Yu Sun',
-    position: 'Advisor',
-    avatar: yu,
-    linkedin: 'https://linkedin.com/in/yu-sun',
-    website: 'https://yusun.io/',
   },
 ];
 
